@@ -51,8 +51,8 @@ export function getApiBaseUrl(): string {
     }
   }
 
-  // Fallback to empty (will use relative URL)
-  return "";
+  // Fallback to the production Railway URL for standalone mobile builds
+  return "https://khidmatai-production.up.railway.app";
 }
 
 export const SESSION_TOKEN_KEY = "app_session_token";
