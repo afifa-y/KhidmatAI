@@ -125,6 +125,7 @@ export function InputBar({ onSend, disabled = false }: InputBarProps) {
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
             style={{
+              flex: 1,
               color: "#ECEDEE",
               fontSize: 15,
               lineHeight: 22,
