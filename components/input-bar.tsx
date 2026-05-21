@@ -51,6 +51,7 @@ export function InputBar({ onSend, disabled = false }: InputBarProps) {
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
         style={{ marginBottom: 8 }}
         contentContainerStyle={{ gap: 6, paddingHorizontal: 2 }}
       >
