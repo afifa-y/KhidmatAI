@@ -8,9 +8,12 @@ export interface ProviderCardProps {
 }
 
 export function ProviderCard({ provider, onSelect }: ProviderCardProps) {
-  const rating = Math.floor(provider.rating || 5);
+  const rating = Math.floor(provider.avgRating || 5);
   const isBest = provider._ranking === 1;
-  const distance = provider.distanceKm !== undefined ? Math.round(provider.distanceKm * 10) / 10 : null;
+  const distance =
+    provider.distanceKm !== undefined && provider.distanceKm !== null
+      ? Math.round(provider.distanceKm * 10) / 10
+      : null;
 
   return (
     <Pressable
@@ -50,7 +53,7 @@ export function ProviderCard({ provider, onSelect }: ProviderCardProps) {
                 ⭐
               </Text>
             ))}
-            <Text className="ml-1 text-xs text-muted">({provider.rating || 5}/5)</Text>
+            <Text className="ml-1 text-xs text-muted">({provider.avgRating || 5}/5)</Text>
           </View>
           <Text className="text-sm font-medium text-foreground">{provider.locationText || "Islamabad"}</Text>
         </View>

@@ -11,4 +11,6 @@ export const ENV = {
   geminiApiKey1: process.env.GEMINI_API_KEY_1 ?? "",
   geminiApiKey2: process.env.GEMINI_API_KEY_2 ?? "",
   groqApiKey: process.env.GROQ_API_KEY ?? "",
+  forgeApiUrl: process.env.BUILT_IN_FORGE_API_URL ?? "",
+  forgeApiKey: process.env.BUILT_IN_FORGE_API_KEY ?? "",
 };

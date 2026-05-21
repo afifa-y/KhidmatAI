@@ -49,7 +49,7 @@ export default function ChatScreen() {
 
   // Thinking steps rotation timer
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: any;
     if (loading && activeThinkingIndex >= 0 && activeThinkingIndex < 2) {
       timer = setTimeout(() => {
         setActiveThinkingIndex((prev) => prev + 1);

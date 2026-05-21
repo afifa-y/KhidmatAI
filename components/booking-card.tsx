@@ -1,6 +1,20 @@
 import { View, Text, ScrollView } from "react-native";
 import { cn } from "@/lib/utils";
-import { BookingConfirmation } from "@/lib/services/booking-api";
+export interface BookingNotification {
+  type: string;
+  message: string;
+  scheduled_at: string;
+}
+
+export interface BookingConfirmation {
+  booking_code: string;
+  service: string;
+  location: string;
+  time: string;
+  provider_name: string;
+  provider_phone?: string;
+  notifications?: BookingNotification[];
+}
 
 export interface BookingCardProps {
   booking: BookingConfirmation;
